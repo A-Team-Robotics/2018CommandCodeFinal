@@ -54,6 +54,7 @@ public class LiftSystem extends Subsystem {
      *  @param secondaryliftEncoder pass the current gripper mast position value
      */
     public void enablePID(double secondaryliftEncoder) {//takes in the desired gripper lift position values between 50 and 30000
+    	SmartDashboard.putString("Current Second Lift Valu", "Number:"+secondaryliftEncoder);
 		_SecondaryLiftMotor.set(ControlMode.Position, secondaryliftEncoder);//enable the PID motor speed output controller
 	}
     
@@ -102,6 +103,5 @@ public class LiftSystem extends Subsystem {
 	public void setSecondaryMast(double speed) {
 		_SecondaryLiftMotor.set(speed);
 	}
-
 }
 
